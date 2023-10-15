@@ -16,6 +16,7 @@ public class Member {
     private String zipcode;
 
     @OneToMany(mappedBy = "member")
+    //초기화를 해야 null exception 방지할 수 있음.
     private List<Order> orders = new ArrayList<>();
 
 
